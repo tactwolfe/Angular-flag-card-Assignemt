@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card__flag-Box">
+        <img src="{{flag}}" alt="image" class="card__flag-Box_flag">
+    </div>
+    <p> <span> <b>Name of the Country : </b> </span> {{name}}</p>
+    <p> <span> <b>Capital : </b> </span> {{capital}}</p>
+    <p> <span> <b>Region : </b> </span> {{region}}</p>
+    <p> <span> <b>Sub-region : </b></span> {{subregion}}</p>
+    <p> <span> <b>Population : </b></span>{{Population}}</p>
+    <p>  <b>Currency : </b></p>
+    <span *ngFor="let c of currency ; last as i" style="list-style: disc;">
+        <li style="display: inline-block;">{{c.name}} {{ i ? "" : "," }} </li>
+    </span>
+    <p>  <b>Language : </b></p>
+    <span *ngFor="let l of language ; last as i">
+        <li style="display: inline-block;">{{l.name}} {{ i ? "" : "," }}</li>
+    </span>
+</div>
